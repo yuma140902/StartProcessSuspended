@@ -30,6 +30,10 @@ int _tmain(int argc, _TCHAR* argv[]){
 		NULL, NULL, &si, &pi
 	);
 	if(!r) return -1;
+
+	fwprintf(stderr, TEXT("\nStarted process successfully.\n\n"));
+	fwprintf(stderr, TEXT("PID: %d\n"), pi.dwProcessId);
+	fwprintf(stderr, TEXT("ThreadID: %d\n"), pi.dwThreadId);
 }
 
 void splash(){
